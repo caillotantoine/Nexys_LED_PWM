@@ -1,0 +1,32 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Sat Feb 27 23:32:34 2021
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "LED" LOCATE = SITE "U16" LEVEL 1;
+COMP "switches<0>" LOCATE = SITE "T10" LEVEL 1;
+COMP "switches<1>" LOCATE = SITE "T9" LEVEL 1;
+COMP "switches<2>" LOCATE = SITE "V9" LEVEL 1;
+COMP "clk" LOCATE = SITE "V10" LEVEL 1;
+COMP "switches<3>" LOCATE = SITE "M8" LEVEL 1;
+COMP "switches<4>" LOCATE = SITE "N8" LEVEL 1;
+COMP "switches<5>" LOCATE = SITE "U8" LEVEL 1;
+COMP "switches<6>" LOCATE = SITE "V8" LEVEL 1;
+COMP "switches<7>" LOCATE = SITE "T5" LEVEL 1;
+TIMEGRP divider_m/clk_o = BEL "PWM_m/pwm_o" BEL "PWM_m/pwm_cnt_0" BEL
+        "PWM_m/pwm_cnt_1" BEL "PWM_m/pwm_cnt_2" BEL "PWM_m/pwm_cnt_3" BEL
+        "PWM_m/pwm_cnt_4" BEL "PWM_m/pwm_cnt_5" BEL "PWM_m/pwm_cnt_6" BEL
+        "PWM_m/pwm_cnt_7" BEL "divider_m/clk_o";
+TIMEGRP clk = BEL "divider_m/clk_o" BEL "divider_m/counter_0" BEL
+        "divider_m/counter_1" BEL "divider_m/counter_2" BEL
+        "divider_m/counter_3" BEL "divider_m/counter_4" BEL
+        "divider_m/counter_5" BEL "divider_m/counter_6" BEL
+        "divider_m/counter_7" BEL "divider_m/counter_8" BEL
+        "divider_m/counter_9" BEL "divider_m/counter_10" BEL
+        "divider_m/counter_11" BEL "divider_m/counter_12" BEL
+        "divider_m/counter_13" BEL "divider_m/counter_14" BEL
+        "divider_m/counter_15" BEL "clk_BUFGP/BUFG";
+TS_clk = PERIOD TIMEGRP "clk" 10 ns HIGH 50%;
+TS_divider_m_clk_o = PERIOD TIMEGRP "divider_m/clk_o" 7440 ns HIGH 50%;
+SCHEMATIC END;
+

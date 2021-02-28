@@ -1,0 +1,3 @@
+verilog work "PWM_generator.v"
+verilog work "clk_devider.v"
+verilog work "PWM_LED_top.v"

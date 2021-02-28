@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=/home/caillot/Documents/Autres/Projets/FPGA/LED_PWM/PWM_LED_top.ncd
+OUTFILE=/home/caillot/Documents/Autres/Projets/FPGA/LED_PWM/PWM_LED_top.bit
+FAMILY=Spartan6
+PART=xc6slx16-2csg324
+WORKINGDIR=/home/caillot/Documents/Autres/Projets/FPGA/LED_PWM
+LICENSE=WebPack
+USER_INFO=210730480_0_0_376
